@@ -36,7 +36,7 @@ export const createPTO = async (req, res) => {
       ptoDates,
       holidayDates,
       reason: reason || "",
-      status: status || "pending",
+      status: status || "Pending",
     });
 
     res.status(201).json({

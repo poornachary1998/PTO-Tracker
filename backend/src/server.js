@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import employeeRoutes from "./routes/employeeRoutes.js";
 import ptoRoutes from "./routes/ptoroutes.js";
+import monthlyUpdateRoutes from "./routes/monthlyUpdateRoutes.js";
 
 dotenv.config();
 
@@ -40,6 +41,8 @@ app.get("/api/health", (req, res) => {
 app.use("/api/employees", employeeRoutes);
 
 app.use("/api/ptos", ptoRoutes);
+
+app.use("/api/monthly-updates", monthlyUpdateRoutes);
 
 
 const PORT = process.env.PORT || 5000;
