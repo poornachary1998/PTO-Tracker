@@ -1,16 +1,25 @@
+import type { ReactNode } from "react";
+import Sidebar from "@/components/Sidebar";
+import TopBar from "@/components/TopBar";
+import styles from "./layout.module.scss";
+import "./globals.scss";
+
 export const metadata = {
   title: "PTO Tracker",
-  description: "Frontend powered by Next.js",
+  description: "Modern PTO & employee operations dashboard",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "sans-serif" }}>
-        <header style={{ background: "#0070f3", padding: "1rem", color: "white" }}>
-          <h1>PTO Tracker</h1>
-        </header>
-        <main style={{ padding: "2rem" }}>{children}</main>
+      <body className={styles.body}>
+        <div className={styles.appShell}>
+          <Sidebar />
+          <div className={styles.mainContent}>
+            <TopBar />
+            <div className={styles.pageArea}>{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );

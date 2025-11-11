@@ -1,0 +1,166 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.splitPanel {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.panelHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.panelHeader p {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.panelHeader button {
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  background: var(--color-surface-muted);
+  font-weight: 600;
+}
+
+.table {
+  width: 100%;
+}
+
+.table tbody tr + tr {
+  border-top: 1px solid var(--color-border);
+}
+
+.name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.pill {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.in {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+}
+
+.wfh {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+}
+
+.out {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--color-danger);
+}
+
+.client {
+  background: rgba(249, 115, 22, 0.12);
+  color: var(--color-warning);
+}
+
+.ptoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ptoRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ptoRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ptoStatus {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.highlights {
+  display: grid;
+  gap: 1rem;
+}
+
+.label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.announcementList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.announcementList h4 {
+  margin: 0;
+}
+
+.announcementList p {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1200px) {
+  .splitPanel,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}

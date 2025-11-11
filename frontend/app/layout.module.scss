@@ -1,0 +1,33 @@
+.body {
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.appShell {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  min-height: 100vh;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.pageArea {
+  flex: 1;
+  padding: 2rem 2.5rem 2.5rem;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+
+  .pageArea {
+    padding: 1.5rem;
+  }
+}

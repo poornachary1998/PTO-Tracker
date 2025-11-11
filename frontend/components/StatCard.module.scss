@@ -1,0 +1,95 @@
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--color-surface-muted);
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.meta {
+  align-self: center;
+}
+
+.title {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.value {
+  margin: 0.35rem 0 0.35rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.delta {
+  text-align: right;
+  align-self: center;
+}
+
+.deltaValue {
+  display: block;
+  font-weight: 600;
+}
+
+.deltaLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.primary .icon {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--color-primary);
+}
+
+.success .icon {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--color-success);
+}
+
+.warning .icon {
+  background: rgba(249, 115, 22, 0.12);
+  color: var(--color-warning);
+}
+
+.neutral .icon {
+  background: rgba(15, 23, 42, 0.08);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .delta {
+    text-align: left;
+  }
+}
