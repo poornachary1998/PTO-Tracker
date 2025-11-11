@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import styles from "./StatCard.module.scss";
 
-type Accent = "primary" | "success" | "warning" | "neutral";
+export type Accent = "primary" | "success" | "warning" | "neutral";
 
 interface StatCardProps {
   title: string;

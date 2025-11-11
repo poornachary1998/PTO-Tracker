@@ -1,8 +1,19 @@
+import type { ReactNode } from "react";
 import PageHeader from "@/components/PageHeader";
-import StatCard from "@/components/StatCard";
+import StatCard, { type Accent } from "@/components/StatCard";
 import styles from "./page.module.scss";
 
-const statCards = [
+type StatCardData = {
+  title: string;
+  value: string;
+  description?: string;
+  delta?: string;
+  deltaLabel?: string;
+  accent: Accent;
+  icon: ReactNode;
+};
+
+const statCards: StatCardData[] = [
   {
     title: "Active employees",
     value: "128",
